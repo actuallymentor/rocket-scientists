@@ -1,0 +1,83 @@
+//- --------------------------------
+//- HiPew settings
+//- --------------------------------
+
+//- This is pace-specific metadata
+-
+	const page = {
+		title: 'Home', desc: 'Live demo of the Hi Pew high performance static website boilerplate.', url: '/',
+		published: '2020-02-11', featuredimg: '/assets/robert-katzki-jbtfM0XBeRc-unsplash.jpg'
+	}
+//- This is a file with helpers
+include pug/_helpers.pug
+
+
+//- --------------------------------
+//- Webpage source code
+//- --------------------------------
+
+doctype html
+html( lang=content.lang )
+	include pug/_header.pug
+	body#index
+		
+		main
+			section#hero
+				h1 Rocket Scientists
+				h2 A small guild of the Rocket Pool community's technical contributors
+				+rimg.stretch( src=site.system.url+'/assets/dalle-rocket-scientists.png' )
+
+			section.card
+				h3 About the Rocket Scientists
+				p The Rocket Scientists are a group of early and passionate community contributors to the technical aspect of Rocket Pool.
+				p Members have actively contributed to everything from research, documentation, smartnode improvements, and sharing their skills with the community.
+				p You can recognise a Rocket Scientist by their Discord role and yellow screen name.
+
+			section.avatars
+				h2 Who are the Rocket Scientists?
+				.row
+
+					.col.avatar
+						+rimg.circle( src=site.system.url+'/assets/ken-rocketeer-28.jpg' )
+						h4 Ken Smith
+						p Ken Smith is the principal of NextBlock Solutions, a blockchain consulting company that provides training and educational services to web3 organizations. Ken is an Ethereum node operator using the Rocket Pool protocol and serving in as a Rocket Scientist with Rocket Pool since 2021. Ken has been active in the Ethereum and other blockchain communities since 2014.
+						.row
+							a( href='https://dao.rocketpool.net/u/ken' ) DAO Profile
+							a( href='https://twitter.com/shtimseht' ) Twitter
+							a( href='https://github.com/htimsk' ) Github
+					
+					.col.avatar
+						+rimg.circle( src=site.system.url+'/assets/peteris-rocketeer-2314.jpg' )
+						h4 Peteris
+						p Author of Rocketscan, a Rocket Pool explorer.
+						.row
+							a( href='https://rocketscan.io/' ) Rocketscan
+							a( href='https://dao.rocketpool.net/u/peteris' ) DAO Profile
+							a( href='https://twitter.com/RocketscanIO' ) Twitter
+							a( href='https://github.com/htimsk' ) Github
+
+					.col.avatar
+						+rimg.circle( src=site.system.url+'/assets/xer0-rocketeer-140.jpg' )
+						h4 Xer0
+						p Author of the Rocket Pool Investment Thesis (RPIT) and RPIT 2.0
+						.row
+							a( href='https://twitter.com/Xer0_eth' ) Twitter
+							a( href='https://discordapp.com/users/Xer0#3297' ) Discord
+							a( href='https://www.reddit.com/user/lifesmage' ) Reddit
+
+
+					.col.avatar
+						+rimg.circle( src=site.system.url+'/assets/mentor-rocketeer-362.jpg' )
+						h4 Mentor Palokaj
+						p Maker of the Rocketeers, wrote most of the security and third party monitoring guides. Web2/3 developer at POAP, OnionDAO, and signer.is.
+						.row
+							a( href='https://rocketeer.fans/' ) Rocketeers
+							a( href='https://github.com/actuallymentor' ) Github
+							a( href='https://www.gitpoap.io/p/mentor.eth' ) GitPOAP
+
+			section#odao
+				h3 About the oDAO
+				p The Rocket Scientists run one of Rocket Pool's oDAO nodes. We've of course taken care to run minority clients.
+
+
+		include pug/_footer.pug

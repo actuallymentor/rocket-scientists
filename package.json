@@ -1,0 +1,62 @@
+{
+  "name": "static-page-boilerplate-webpack-browsersync",
+  "version": "1.0.0",
+  "description": "Static Webpage with Webpack and Browsersync Boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "nvm": "nodever=$(<.nvmrc) && node -v | grep -q \"v$nodever\" && echo \"Correct node version\" || ( echo  \"[x] Node version $nodever required\\n\\n\" && exit 1 )",
+    "test": "mocha -r esm",
+    "start": "npm run nvm && NODE_ENV=development webpack --progress --watch",
+    "build": "npm run nvm && NODE_ENV=production webpack --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actuallymentor/static-webpage-boilerplate-webpack-browsersync.git"
+  },
+  "author": "Mentor Palokaj <mentor@palokaj.co> (https://github.com/actuallymentor)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/actuallymentor/static-webpage-boilerplate-webpack-browsersync/issues"
+  },
+  "homepage": "https://github.com/actuallymentor/static-webpage-boilerplate-webpack-browsersync#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.27.11",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "css-loader": "^6.7.3",
+    "cssnano": "^5.1.14",
+    "del": "6.1.1",
+    "doiuse": "^4.4.1",
+    "dotenv": "^16.0.3",
+    "html-minifier": "^4.0.0",
+    "ip": "^1.1.8",
+    "mkdirp": "^2.1.3",
+    "ncp": "^2.0.0",
+    "postcss": "^8.4.21",
+    "pug": "^3.0.2",
+    "sass": "^1.57.1",
+    "sharp": "^0.31.3",
+    "sitemap": "^7.1.1",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.32.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.2.0",
+    "recursive-readdir": "^2.2.3",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "webpack-cli": "^5.0.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
+}

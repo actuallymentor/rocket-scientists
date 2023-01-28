@@ -7,7 +7,8 @@
     "nvm": "nodever=$(<.nvmrc) && node -v | grep -q \"v$nodever\" && echo \"Correct node version\" || ( echo  \"[x] Node version $nodever required\\n\\n\" && exit 1 )",
     "test": "mocha -r esm",
     "start": "npm run nvm && NODE_ENV=development webpack --progress --watch",
-    "build": "npm run nvm && NODE_ENV=production webpack --progress"
+    "build": "npm run nvm && NODE_ENV=production webpack --progress",
+    "deploy": "firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.32.0",
     "esm": "^3.2.25",
+    "firebase-tools": "^11.21.0",
     "mocha": "^10.2.0",
     "recursive-readdir": "^2.2.3",
     "request": "^2.88.2",

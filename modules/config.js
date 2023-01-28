@@ -31,7 +31,7 @@ module.exports = {
 		// Browser compatibility warnings
 		browser: {
 			support: {
-				browsers: [ 'last 2 versions', 'not dead' ],
+				browsers: [ 'last 2 versions', 'not dead', 'not op_mini all' ],
 
 				// Format your own based on: https://github.com/browserslist/browserslist
 				// browsers: [ '>1%' ]
